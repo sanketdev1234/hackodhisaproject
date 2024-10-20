@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url("01.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+  }
+  
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #achievementList, #assetList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  #assetList {
+    background-image: url("background.jpeg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    min-height: 400px; 
+    position: relative; 
+  }
+  
+  /* Optional: Add a semi-transparent overlay for better text readability */
+  #assetList::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* A dark overlay */
+    z-index: 1; /* Ensure overlay is above background image */
+  }
+  
+  #assetList .card {
+    position: relative;
+    z-index: 2; 
+  }
+  
+  
+  #achievementList {
+    background-image: url("achievement.jpg"); /* Add your background image path */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    min-height: 400px; /* Set a minimum height */
+    position: relative; /* Ensure child elements (e.g., cards) are positioned correctly */
+  }
+  
+  /* Optional: Add a semi-transparent overlay to darken the background for better text readability */
+  #achievementList::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+    z-index: 1; /* Ensure overlay is on top of the background but behind the text */
+  }
+  .card.legendary-sword {
+    background-image: url("sword.jpeg");
+    background-size: contain; /* or 'cover', 'auto' depending on your needs */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px; /* Adjust height for your container */
+    width: 110px; /* Make the image responsive */
+  }
+  
+  #achievementList .card {
+    position: relative;
+    z-index: 2; 
+  }
+  
+  
+  /* General card styling */
+  .card {
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fafafa;
+    color: white;
+    height: 250px; /* Set a fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    position: relative;
+    z-index: 0; /* Ensure the hover effect appears on top */
+  }
+  
+  /* Hover effect: Moves the card up and adds a subtle shadow */
+  .card:hover {
+    transform: translateY(-10px); /* Move the card up by 10px */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+    z-index: 2; /* Make sure the card appears above others while hovered */
+  }
+  
+  
+  /* For cards with background images */
+  .card.with-background h3 {
+    font-size: 24px; /* Increase font size */
+    font-weight: bold; /* Make title bold */
+    color: #fff; /* Ensure the title is white for contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow to make text stand out */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background behind the title */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for a clean look */
+    display: inline-block; /* Make background wrap around the text */
+    position: relative;
+    z-index: 3;
+  }
+  
+  .card.with-background {
+    position: relative;
+    overflow: hidden;
+    height: 250px; 
+  }
+  
+  .card.with-background h3 {
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+    right: 20px;
+    text-align: center;
+  }
+  
+  .card.with-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+  }
+  
+  .card p, .card button {
+    position: relative;
+    z-index: 2; 
+  }
+  #assetUtilization h3 {
+    background-image: url("back.webp"); /* Background image path */
+    background-size: cover; /* Ensure the image covers the header */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color for better visibility */
+    padding: 15px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to text for clarity */
+    margin: 20px 0; /* Margin for spacing between sections */
+    position: relative; /* For potential overlay use */
+    z-index: 1; /* Ensure text appears on top of the background */
+  }
+  
+  /* Optional: Add an overlay for better text visibility */
+  #assetUtilization h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    border-radius: 5px; /* Match h3 border radius */
+    z-index: -1; /* Place behind the text */
+  }
+  #player{
+    background-image: url("back.jpg"); /* Background image path */
+    background-size: cover; /* Ensure the image covers the header */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color for better visibility */
+    padding: 15px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to text for clarity */
+    margin: 20px 0; /* Margin for spacing between sections */
+    position: relative; /* For potential overlay use */
+    z-index: 1; /* Ensure text appears on top of the background */
+  }
+  
+  /* Optional: Add an overlay for better text visibility */
+  #player::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    border-radius: 5px; /* Match h3 border radius */
+    z-index: -1; /* Place behind the text */
+  }
+  #arch{
+    background-image: url("achievement.jpeg"); /* Background image path */
+    background-size: cover; /* Ensure the image covers the header */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color for better visibility */
+    padding: 15px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to text for clarity */
+    margin: 20px 0; /* Margin for spacing between sections */
+    position: relative; /* For potential overlay use */
+    z-index: 1; /* Ensure text appears on top of the background */
+  }
+  
+  /* Optional: Add an overlay for better text visibility */
+  #arch::before {
+    content: '';  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    border-radius: 5px; /* Match h3 border radius */
+    z-index: -1; /* Place behind the text */
+  }
+  
+  
+  
+  
+  .card.locked {
+    opacity: 0.5;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card button:disabled {
+    background-color: #ddd;
+  }

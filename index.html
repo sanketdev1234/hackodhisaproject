@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea Achievement and Asset Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="player">
+        <h1>Linea Interoperable Achievement & Asset Tracker</h1>
+
+        <!-- Player Profile Section -->
+        <div class="profile">
+            <h2>Player: <span id="playerName">Player1</span></h2>
+            <p>Total Points: <span id="totalPoints">0</span></p>
+        </div> 
+        </div>
+
+        <!-- Achievements Section -->
+         <div id="arch">
+        <h3>Achievements</h3> </div>
+        <div id="achievementList">
+            <div class="card">
+                <h3>First Blood</h3>
+                <p>Defeat your first enemy.</p>
+                <p>Game: Game A</p>
+                <p>Points: 10</p>
+                <button onclick="unlockAchievement(1)">Unlock</button>
+            </div>
+            
+            <div class="card">
+                <h3>Explorer</h3>
+                <p>Discover a hidden area.</p>
+                <p>Game: Game B</p>
+                <p>Points: 20</p>
+                <button onclick="unlockAchievement(2)">Unlock</button>
+            </div>
+        </div>
+        
+        <audio id="unlockSound" src="stab-f-01-brvhrtz-224599.mp3" preload="auto"></audio>
+        <audio id="backgroundMusic" autoplay loop>
+            <source src="action-fight-239712.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+
+        <!-- Cross-Game Asset Usage Section   --> 
+        <div id="assetUtilization">
+            <h3>Asset Utilization (NFTs, Tokens)</h3>
+        </div>
+        
+        <div id="assetList">
+            <!-- Assets will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
